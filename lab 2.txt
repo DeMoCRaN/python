@@ -1,0 +1,10 @@
+def split_strings(strings):
+
+    # "2. Написать функцию, которая принимает список, который содержит "
+    # "строки и выводит на экран новые списки из входящих строк."
+
+  for string in strings:
+    print(list(string))
+
+str = ["Hello", "World", "Python"]
+split_strings(str)

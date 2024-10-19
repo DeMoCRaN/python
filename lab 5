@@ -1,0 +1,20 @@
+import json
+
+"12.Написать функцию, принимающую словарь, который может содержать любые элементы и конвертирует в Json только "
+"те элементы, значения которых являются списками, содержащими только целочисленные значения."
+
+def find_and_convert(data):
+
+  for key, value in data.items():
+    if isinstance(value, list) and all(isinstance(item, int) for item in value):
+      print(json.dumps({key: value}))
+
+my_dict = {
+  "name": "Robert Polson",
+  "day":4,
+  "numbers": [1, 2, 3],
+  "mix_list": [1, "a", 2.5],
+  "list_of_list": [[1, 2], [3, 4]]
+}
+
+find_and_convert(my_dict)  

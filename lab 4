@@ -1,0 +1,20 @@
+import os
+
+"12.Написать функцию, которая принимает путь к директории и наименование файла и возвращает полный путь к полученному файлу."
+
+def get_full_path(directory, filename):
+
+  full_path = os.path.join(directory, filename)
+  if os.path.exists(full_path):
+    return full_path
+  else:
+    return None
+
+directory = "/home/democran/Рабочий стол/HW"
+filename = "Main page.html"
+full_path = get_full_path(directory, filename)
+
+if full_path:
+  print(full_path) 
+else:
+  print("Файл не найден.")
